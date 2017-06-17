@@ -1,0 +1,20 @@
+<assembly>
+    <id>dist</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <!-- copy a directory named /module1/target/classes having a conf.properties files -->
+        <fileSet>
+            <directory>../module1/target/classes</directory>
+            <outputDirectory>release</outputDirectory>
+        </fileSet>
+        <!-- copy another directory named /module2/target/classes having a conf.properties files -->
+        <fileSet>
+            <directory>../module2/target/classes</directory>
+            <outputDirectory>release</outputDirectory>
+            <!--overwrite>true</overwrite-->
+        </fileSet>
+    </fileSets>
+</assembly>
